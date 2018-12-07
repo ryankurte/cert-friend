@@ -1,6 +1,12 @@
-// see:
-//   - https://golang.org/src/crypto/tls/generate_cert.go
-//   - https://github.com/ryankurte/evilproxy/blob/master/lib/ingress/tls.go
+/**
+ * cert-friend
+ * Certificate Implementation
+ *
+ * This Software is licensed under the GNU GPLv3.
+ *
+ * https://github.com/ryankurte/cert-friend
+ * Copyright 2018 Ryan Kurte
+ */
 
 package certfriend
 

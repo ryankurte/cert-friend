@@ -1,6 +1,17 @@
+/**
+ * cert-friend
+ * General Options, used by go-flags to capture command line and configuration file state
+ *
+ * This Software is licensed under the GNU GPLv3.
+ *
+ * https://github.com/ryankurte/cert-friend
+ * Copyright 2018 Ryan Kurte
+ */
+
 package options
 
 // Options is a go-flags compatible options structure for passing command line options.
+// Subcommands are defined using structures with `command` annotation.
 type Options struct {
 	BaseOptions
 

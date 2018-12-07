@@ -1,3 +1,12 @@
+/**
+ * cert-friend
+ * Command Line Utility
+ *
+ * This Software is licensed under the GNU GPLv3.
+ *
+ * https://github.com/ryankurte/cert-friend
+ * Copyright 2018 Ryan Kurte
+ */
 package main
 
 import (
@@ -7,7 +16,7 @@ import (
 
 	"github.com/jessevdk/go-flags"
 
-	certfriend "github.com/ryankurte/ca-friend/lib"
+	certfriend "github.com/ryankurte/cert-friend/lib"
 	"github.com/ryankurte/cert-friend/lib/options"
 )
 

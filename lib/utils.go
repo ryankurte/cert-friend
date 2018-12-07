@@ -1,3 +1,13 @@
+/**
+ * cert-friend
+ * Helper utilities
+ *
+ * This Software is licensed under the GNU GPLv3.
+ *
+ * https://github.com/ryankurte/cert-friend
+ * Copyright 2018 Ryan Kurte
+ */
+
 package certfriend
 
 import (
@@ -34,6 +44,7 @@ func LoadFile(filename string, o interface{}) (bool, error) {
 	return true, nil
 }
 
+// FileExists checks if a file exists
 func FileExists(filename string) bool {
 	if _, err := os.Stat(filename); !os.IsNotExist(err) {
 		return true

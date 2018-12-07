@@ -1,3 +1,13 @@
+/**
+ * cert-friend
+ * Certificate Infrastructure Configuration Objects
+ *
+ * This Software is licensed under the GNU GPLv3.
+ *
+ * https://github.com/ryankurte/cert-friend
+ * Copyright 2018 Ryan Kurte
+ */
+
 package certfriend
 
 import (
