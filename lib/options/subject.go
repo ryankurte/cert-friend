@@ -2,6 +2,8 @@ package options
 
 import (
 	"crypto/x509/pkix"
+
+	"github.com/Songmu/prompter"
 )
 
 // SubjectOptions encodes certificate subject information
@@ -32,4 +34,17 @@ func (so *SubjectOptions) ToPkixName() pkix.Name {
 	}
 
 	return name
+}
+
+// General Build general configuration with CLI interaction
+func (so *SubjectOptions) General() {
+	so.Country = prompter.Prompt("Enter your ISO 3166 country code", so.Country)
+	so.Org = prompter.Prompt("Enter the name of your organisation", so.Org)
+	so.OrgUnit = prompter.Prompt("Enter your organisational unit", so.OrgUnit)
+}
+
+// Specific Build certificate specific configuration with CLI interaction
+func (so *SubjectOptions) Specific() {
+	so.CommonName = prompter.Prompt("Enter a Common Name for your certificate", so.CommonName)
+	so.Serial = prompter.Prompt("Enter a certificate serial number", so.Serial)
 }

@@ -7,8 +7,8 @@ import (
 
 	"github.com/jessevdk/go-flags"
 
-	"github.com/ryankurte/ca-friend/lib"
-	"github.com/ryankurte/ca-friend/lib/options"
+	cafriend "github.com/ryankurte/ca-friend/lib"
+	"github.com/ryankurte/cert-friend/lib/options"
 )
 
 var version string = "NOT SET"

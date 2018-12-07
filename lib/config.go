@@ -1,7 +1,7 @@
 package cafriend
 
 import (
-	"github.com/ryankurte/ca-friend/lib/options"
+	"github.com/ryankurte/cert-friend/lib/options"
 )
 
 // Config is the configuration for a certificate infrastructure instance
