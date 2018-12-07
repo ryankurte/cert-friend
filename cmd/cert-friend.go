@@ -8,13 +8,16 @@ import (
 	"github.com/jessevdk/go-flags"
 
 	"github.com/ryankurte/ca-friend/lib"
+	"github.com/ryankurte/ca-friend/lib/options"
 )
+
+var version string = "NOT SET"
 
 func main() {
 	log.SetFlags(0)
 
 	// Parse options
-	c := cafriend.Options{}
+	c := options.Options{}
 	p := flags.NewParser(&c, flags.Default)
 	_, err := p.Parse()
 	if err != nil {
@@ -37,7 +40,7 @@ func main() {
 
 	switch p.Active.Name {
 	case "configure":
-		cafriend.Configure(&c.BaseOptions, &c.Config)
+		cafriend.Configure(config, database, c.BaseOptions, c.Config)
 
 	default:
 		fmt.Printf("Command '%s' not yet implemented", p.Active.Name)
