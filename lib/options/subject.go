@@ -9,7 +9,7 @@ import (
 // SubjectOptions encodes certificate subject information
 type SubjectOptions struct {
 	CommonName string `long:"commonname" description:"Common Name"`
-	Serial     string `long:"serial" description:"Serial"`
+	Serial     string `long:"serial" description:"Serial string"`
 
 	Country string `long:"country" description:"ISO 3166 country code" yaml:",omitempty"`
 	Org     string `long:"org" description:"Organisation name" yaml:",omitempty"`

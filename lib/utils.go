@@ -1,4 +1,4 @@
-package cafriend
+package certfriend
 
 import (
 	"io/ioutil"

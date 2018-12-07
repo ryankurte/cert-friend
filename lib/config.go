@@ -1,4 +1,4 @@
-package cafriend
+package certfriend
 
 import (
 	"github.com/ryankurte/cert-friend/lib/options"

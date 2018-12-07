@@ -7,7 +7,7 @@ import (
 
 	"github.com/jessevdk/go-flags"
 
-	cafriend "github.com/ryankurte/ca-friend/lib"
+	certfriend "github.com/ryankurte/ca-friend/lib"
 	"github.com/ryankurte/cert-friend/lib/options"
 )
 
@@ -25,22 +25,22 @@ func main() {
 	}
 
 	// Try load config file
-	var config cafriend.Config
-	_, err = cafriend.LoadFile(c.BaseOptions.Config, &config)
+	var config certfriend.Config
+	_, err = certfriend.LoadFile(c.BaseOptions.Config, &config)
 	if err != nil {
 		log.Fatalf("Error loading config: '%s'", err)
 	}
 
 	// Try to load database
-	var database cafriend.Database
-	_, err = cafriend.LoadFile(c.BaseOptions.Database, &database)
+	var database certfriend.Database
+	_, err = certfriend.LoadFile(c.BaseOptions.Database, &database)
 	if err != nil {
 		log.Fatalf("Error loading database: '%s'", err)
 	}
 
 	switch p.Active.Name {
 	case "configure":
-		cafriend.Configure(config, database, c.BaseOptions, c.Config)
+		certfriend.Configure(config, database, c.BaseOptions, c.Config)
 
 	default:
 		fmt.Printf("Command '%s' not yet implemented", p.Active.Name)

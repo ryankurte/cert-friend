@@ -1,4 +1,4 @@
-package cafriend
+package certfriend
 
 import (
 	"fmt"
@@ -26,11 +26,14 @@ func Configure(c Config, d Database, b options.BaseOptions, o options.ConfigOpti
 	log.Printf("First we have to decide what type of cryptographic algorithms you would like to use...\n")
 	c.ConfigOptions.Interactive()
 
+	// TODO: interactively configure hash function
+
 	// Configure subject interactively
 	log.Printf("Now we need to setup a subject information common to all certificates, though this can be overwritten layer.")
 	c.SubjectOptions.General()
 
-	// TODO: interactively configure hash function
+	log.Printf("Finally, we'll set some defaults for certificate issuing")
+	c.CertificateOptions.General()
 
 	// Save configuration
 	// TODO: refactor / flatten this
