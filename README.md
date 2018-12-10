@@ -1,6 +1,6 @@
 # cert-friend
 
-cert-friend is a friendly certificate and certificate authority utility, designed to simplify the process and support people who want to use tls for stuff.
+cert-friend is a friendly certificate and certificate authority utility, designed to support the *internal development use of self-signed CAs* and *production deployment of Public Key Infrastructure (PKI)*.
 
 This consists of a core utility that helps create and manage local certificate infrastructure that can connect to and be run as a daemon to support remote certificate requests and signing.
 
@@ -21,6 +21,22 @@ cert-friend generates a human-readible database for certificate management that 
 ## Status
 
 *** Work In Progress ***
+
+## Usage
+
+cert-friend uses a pair of files to store and maintain infrastructure state. The *configuration* file contains the static configuration such as algorithms and names, as well as optionally a set of desired certificates. The *database* file contains a list of issued certificates and certificate states for management. Both of these files can be checked into version control to provide a simple mechanism for change management and tracking.
+
+Broadly speaking, PKI consists of a certificate authority and a number of *intermediate*, *client*, and *server* certificates and cryptographic public-private key pairs. *server* certificates allow server identities to be validated, *client* certificates allow clients to be identified and the use of mutual TLS, and *intermediate* certificates allow signing of further *client* or *server* certificates, useful for delegating certificate creation to other services. 
+
+To get started, run `cert-friend configure`. This will walk you through the configuration of a new PKI instance and create a configuration file for future use.
+
+Once you've created a configuration, it's time to generate a CA. Run `cert-friend new-ca` to generate a new Certificate Authority. Again this will interactively walk you through the creation of a CA. `cert-friend new-ca --help` will list the possible arguments.
+
+### For internal / development use
+
+
+### For production PKI deployment
+
 
 ## Features
 
