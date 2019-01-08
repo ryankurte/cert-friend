@@ -1,6 +1,6 @@
 # cert-friend
 
-**THIS PROJECT IS A WORK IN PROGRESS, ALMOST NOTHING EXISTS / WORKS YET**
+**THIS PROJECT IS AN ASPIRATIONAL WORK IN PROGRESS, ALMOST NOTHING EXISTS / WORKS YET**
 
 cert-friend is a friendly certificate and certificate authority utility, designed to support the *internal development use of self-signed CAs* and *production deployment of Public Key Infrastructure (PKI)*.
 
