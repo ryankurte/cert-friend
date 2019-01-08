@@ -1,5 +1,7 @@
 # cert-friend
 
+**THIS PROJECT IS A WORK IN PROGRESS, ALMOST NOTHING EXISTS / WORKS YET**
+
 cert-friend is a friendly certificate and certificate authority utility, designed to support the *internal development use of self-signed CAs* and *production deployment of Public Key Infrastructure (PKI)*.
 
 This consists of a core utility that helps create and manage local certificate infrastructure that can connect to and be run as a daemon to support remote certificate requests and signing.
